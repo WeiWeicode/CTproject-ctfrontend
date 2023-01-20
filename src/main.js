@@ -6,15 +6,24 @@ import 'echarts-gl'
 import jquery from 'jquery';
 import ecStat from 'echarts-stat';
 
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
 const app = createApp(App)
 
 App.jquery = jquery;
 App.echarts = echarts;
-app.ecStat = ecStat
+App.ecStat = ecStat
 
+const vuetify = createVuetify({
+    components,
+    directives,
+})
 
 
 // Object.defineProperty(VueElement.prototype, '$echarts', { value: echarts })
-createApp(App).mount('#app')
+createApp(App).use(vuetify).mount('#app')
 
 

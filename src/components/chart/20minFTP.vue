@@ -4,7 +4,7 @@
   <div
     class="echart"
     id="20minFTP"
-    :style="{ width: '100%', height: '100%' }"
+    
   ></div>
 </template>
 
@@ -23,6 +23,12 @@ export default {
 
       var chartDom = document.getElementById("20minFTP");
       var myChart = echarts.init(chartDom);
+
+      // 自適應大小
+      window.addEventListener("resize", () => {
+        myChart.resize();
+      });
+
       var option;
 
       option = {
@@ -53,12 +59,12 @@ export default {
         yAxis: {
           type: "value",
           axisLabel: {
-            formatter: "{value} °C",
+            formatter: "{value} W",
           },
         },
         series: [
           {
-            name: "Highest",
+            // name: "Highest",
             type: "line",
             data: [700, 600, 300, 240, 220, 200],
             markPoint: {
@@ -117,7 +123,11 @@ export default {
 </script>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+.echart {
+  width: 100%;
+  /* max-width: 600px; */
+  min-width: 300px;
+  height: 400px;
 }
+
 </style>

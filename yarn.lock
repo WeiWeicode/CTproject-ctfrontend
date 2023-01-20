@@ -698,6 +698,7 @@ __metadata:
     vite: ^4.0.0
     vite-plugin-require-transform: ^1.0.6
     vue: ^3.2.45
+    vuetify: ^3.1.1
   languageName: unknown
   linkType: soft
 
@@ -1762,6 +1763,25 @@ __metadata:
     "@vue/server-renderer": 3.2.45
     "@vue/shared": 3.2.45
   checksum: df60ca80cb9fdce408eccd0c7a4d44720df9855c62e340448650d8048b1edd25da6f3bd99ed7efc19efbe1f3fdcec4ae8067ab10ae50be5bb363d996ad29251a
+  languageName: node
+  linkType: hard
+
+"vuetify@npm:^3.1.1":
+  version: 3.1.2
+  resolution: "vuetify@npm:3.1.2"
+  peerDependencies:
+    vite-plugin-vuetify: ^1.0.0-alpha.12
+    vue: ^3.2.0
+    vue-i18n: ^9.0.0
+    webpack-plugin-vuetify: ^2.0.0-alpha.11
+  peerDependenciesMeta:
+    vite-plugin-vuetify:
+      optional: true
+    vue-i18n:
+      optional: true
+    webpack-plugin-vuetify:
+      optional: true
+  checksum: c1ff7b842382f6695bbe5d41ddbf697058d8c0930a5fee76d5d0278f6766d7532a24b0294f5c919a925fd54cdc7c3eb27d573e696673fd4ce2df08f589ab04a8
   languageName: node
   linkType: hard
 

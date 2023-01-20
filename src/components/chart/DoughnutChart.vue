@@ -1,11 +1,15 @@
 <template>
   <h1>圓餅圖</h1>
 
-  <div
-    class="echart"
-    id="main"
-    :style="{ width: '100%', height: '100%' }"
-  ></div>
+  <div class="echart" id="main"></div>
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="echart" id="main"></div>
+      </div>
+    </div>
+  </div> -->
 </template>
 
 
@@ -17,62 +21,75 @@ import * as echarts from "echarts";
 
 export default {
   name: "Doughnut",
+
   methods: {
     draw() {
       //
 
-      var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
-var option;
+      var chartDom = document.getElementById("main");
+      var myChart = echarts.init(chartDom);
 
-option = {
-  tooltip: {
-    trigger: 'item'
-  },
-  legend: {
-    top: '5%',
-    left: 'center'
-  },
-  series: [
-    {
-      name: 'Access From',
-      type: 'pie',
-      radius: ['40%', '70%'],
-      avoidLabelOverlap: false,
-      label: {
-        show: false,
-        position: 'center'
-      },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: 40,
-          fontWeight: 'bold'
-        }
-      },
-      labelLine: {
-        show: false
-      },
-      data: [
-        { value: 1048, name: 'Search Engine' },
-        { value: 735, name: 'Direct' },
-        { value: 580, name: 'Email' },
-        { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' }
-      ]
-    }
-  ]
-};
+      // 自適應大小
+      window.addEventListener("resize", () => {
+        myChart.resize();
+      });
 
-option && myChart.setOption(option);
 
+      var option;
+
+      option = {
+        tooltip: {
+          trigger: "item",
+        },
+        legend: {
+          top: "5%",
+          left: "center",
+        },
+        series: [
+          {
+            name: "Access From",
+            type: "pie",
+            radius: ["40%", "70%"],
+            avoidLabelOverlap: false,
+            label: {
+              show: false,
+              position: "center",
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: 40,
+                fontWeight: "bold",
+              },
+            },
+            labelLine: {
+              show: false,
+            },
+            data: [
+              { value: 100, name: "Bryton" },
+              { value: 150, name: "Gramin" },
+              { value: 40, name: "Wahoo" },
+            ],
+          },
+        ],
+      };
+
+      option && myChart.setOption(option);
 
       //
     },
   },
 
-  mounted() {
+  mounted() {    
     this.draw();
   },
 };
 </script>
+
+<style scoped>
+.echart {
+  width: 100%;
+  min-width: 300px;
+  height: 400px;
+}
+</style>

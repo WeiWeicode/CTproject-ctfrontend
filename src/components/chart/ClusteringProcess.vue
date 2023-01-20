@@ -4,7 +4,7 @@
   <div
     class="echart"
     id="ClusteringProcess"
-    :style="{ width: '100%', height: '100%' }"
+    
   ></div>
 </template>
 
@@ -24,6 +24,12 @@ export default {
 
       var chartDom = document.getElementById("ClusteringProcess");
       var myChart = echarts.init(chartDom);
+
+      // 自適應大小
+      window.addEventListener("resize", () => {
+        myChart.resize();
+      });
+
       var option;
 
       // See https://github.com/ecomfe/echarts-stat
@@ -166,3 +172,14 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+.echart {
+  width: 100%;
+  min-width: 300px;
+  height: 400px;
+  
+}
+
+</style>
