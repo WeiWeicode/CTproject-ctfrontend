@@ -16,19 +16,19 @@
 
  
 
-  <v-container class="bg-surface-variant">
+  <v-container >
     <v-row no-gutters>
       <v-col>
-        <v-sheet class="pa-2 ma-2"> <FTP20min /></v-sheet>
+        <v-sheet > <FTP20min /></v-sheet>
       </v-col>
       <v-col>
-        <v-sheet class="pa-2 ma-2"> <DoughnutChart /> </v-sheet>
+        <v-sheet > <DoughnutChart /> </v-sheet>
       </v-col>
 
       <v-responsive width="100%"></v-responsive>
 
       <v-col>
-        <v-sheet class="pa-2 ma-2"> <ClusteringProcess /> </v-sheet>
+        <v-sheet > <ClusteringProcess /> </v-sheet>
       </v-col>
 
       <!-- <v-col>
