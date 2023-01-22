@@ -1,28 +1,21 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      dark
-      shrink-on-scroll
-      prominent
-      src="https://picsum.photos/1920/1080?random"
-      fade-img-on-scroll
-      scroll-target="#scrolling-techniques-3"
-      inverted-scroll
-    >
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
-        ></v-img>
-      </template>
+    <v-row>
+      <v-app-bar app dark shrink-on-scroll prominent>
+        <template v-slot:img="{ props }">
+          <v-img
+            v-bind="props"
+            gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+          ></v-img>
+        </template>
 
-      <!-- <v-spacer></v-spacer> -->
-      <v-row>
+        <!-- <v-spacer></v-spacer> -->
+
         <v-col class="pa-2" outlined tile>
           <v-app-bar-nav-icon @click.stop="drawer = !drawer">
           </v-app-bar-nav-icon>
         </v-col>
+
         <v-spacer></v-spacer>
 
         <v-col outlined tile>
@@ -32,27 +25,38 @@
         <v-spacer></v-spacer>
         <v-col class="pa-2" outlined tile>
           <!-- about blog -->
+
+          <v-tabs>
+            <v-tab>about</v-tab>
+            <v-tab>開箱</v-tab>
+            <v-tab>blog</v-tab>
+          </v-tabs>
         </v-col>
 
         <!-- <v-col>
             <v-app-bar-title>Title</v-app-bar-title>
           </v-col> -->
-      </v-row>
-    </v-app-bar>
+      </v-app-bar>
+    </v-row>
 
     <v-navigation-drawer v-model="drawer" bottom temporary>
-      <v-list-item>
-        <v-list-item-avatar>
-          <v-img src="https://picsum.photos/200/200?random" />
-        </v-list-item-avatar>
+      <v-view v-if="false">
+        <!-- 有登入才顯示 -->
+        <v-list-item>
+          <v-list-item-avatar>
+            <v-avatar>
+              <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+            </v-avatar>
+          </v-list-item-avatar>
 
-        <v-list-item-content>
-          <v-list-item-title class="title">
-            {{ user.fullName }}
-          </v-list-item-title>
-          <v-list-item-subtitle>{{ user.email }}</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="title">
+              {{ user.fullName }}
+            </v-list-item-title>
+            <v-list-item-subtitle>{{ user.email }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-view>
 
       <v-list nav dense>
         <v-list-item-group
@@ -80,7 +84,7 @@
       </v-list>
 
       <v-divider></v-divider>
-      <v-view v-if="false">
+      <v-view v-if="true">
         <v-list-item link @click="login">
           <v-list-item-title>Login</v-list-item-title>
         </v-list-item>
@@ -93,34 +97,45 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container class="grey lighten-5">
+      <v-container>
         <router-view />
       </v-container>
+      
     </v-main>
+
+    <v-dialog v-model="dialog" persistent max-width="600px">
+      <login @close="dialog = false" />
+    </v-dialog>
+
+    <!-- 彈出Login視窗 -->
+    <!-- <login v-if="false" /> -->
 
     <!-- <v-main>
       <helloVuetify />
       <h1>APPvue</h1>
       <helloEchart />
     </v-main> -->
+    
   </v-app>
 </template>
 
 <script>
 import helloEchart from "./components/helloEchart.vue";
 import helloVuetify from "./components/helloVuetify.vue";
+import login from "./components/package/account/login.vue";
 
 export default {
   name: "App",
+  props: {
+    // dialogLogin
+  },
 
   data: () => ({
     drawer: false,
+    dialog: false,
+
     group: null,
-    user: {
-      initials: "JD",
-      fullName: "John Doe",
-      email: "john.doe@doe.com",
-    },
+    user: {},
   }),
 
   watch: {
@@ -132,6 +147,7 @@ export default {
   components: {
     helloEchart,
     helloVuetify,
+    login,
   },
 
   methods: {
@@ -143,6 +159,14 @@ export default {
     },
     calculate() {
       this.$router.push("/Calculate");
+    },
+    login() {
+      this.dialog = true;
+    },
+    // 接收子層傳遞的dialog資料
+
+    logout() {
+      this.$store.dispatch("logout");
     },
   },
 };
