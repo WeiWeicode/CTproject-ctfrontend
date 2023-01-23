@@ -5,7 +5,7 @@
     <v-col cols="12" sm="6" md="4" v-for="road in roadSection" :key="road.id">
       <v-card class="mx-auto" >
         <v-img
-          height="194"
+          mx.height="194"
           :src="road.照片"
           
         ></v-img>
@@ -87,12 +87,6 @@ export default {
     };
   },
 
-  methods: {
-    reserve() {
-      this.loading = true;
-
-      setTimeout(() => (this.loading = false), 2000);
-    },
-  },
+  
 };
 </script>

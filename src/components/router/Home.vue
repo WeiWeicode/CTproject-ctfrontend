@@ -16,15 +16,10 @@
     </v-carousel-item>
   </v-carousel>
 
-  <h1>更新日誌</h1>
-
+  
+<!-- 
   <v-timeline side="end" align="start">
-    <v-timeline-item
-      v-for="(year, i) in updatelog"
-      :key="i"
-      dot-color="pink"
-      size="small"
-    >
+    <v-timeline-item v-for="(year, i) in updatelog" :key="i" dot-color="pink" size="small">
       <template v-slot:icon>
         <v-avatar>
           <img :src="year.timesrc" />
@@ -34,15 +29,15 @@
       <template v-slot:opposite>
         <span class="font-weight-bold">{{ year.date }}</span>
       </template>
-      <!-- <v-card width="400" title= {{year.title}}> -->
-      <v-card  class="mx-auto" width="200" :title="year.title">
-        <v-card-text class="py-2"> {{ year.text }} </v-card-text>
 
-        <!-- <h2 class="font-weight-bold">{{ year.title }}</h2> -->
-        <!-- <p>{{ year.text }}</p> -->
-      </v-card>
+      <h2 class="font-weight-bold">{{ year.title }}</h2>
+      <p>{{ year.text }}</p>
+    
+      
     </v-timeline-item>
-  </v-timeline>
+
+  </v-timeline> -->
+
 
   <!-- <helloEchart /> -->
 </template>
@@ -122,6 +117,25 @@ export default {
     },
   },
 
-  
+  methods: {
+    comment() {
+      const time = new Date().toTimeString();
+      this.events.push({
+        id: this.nonce++,
+        text: this.input,
+        time: time.replace(
+          /:\d{2}\sGMT-\d{4}\s\((.*)\)/,
+          (match, contents, offset) => {
+            return ` ${contents
+              .split(" ")
+              .map((v) => v.charAt(0))
+              .join("")}`;
+          }
+        ),
+      });
+
+      this.input = null;
+    },
+  },
 };
 </script>
