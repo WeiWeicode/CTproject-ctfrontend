@@ -1,11 +1,11 @@
 <template>
-    <h1>Proudct</h1>
+    <h1>Statistical</h1>
   </template>
       
       
   
   <script>
   export default {
-    name: "Proudct",
+    name: "Statistical",
   };
   </script>

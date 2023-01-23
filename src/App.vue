@@ -40,7 +40,7 @@
     </v-row>
 
     <v-navigation-drawer v-model="drawer" bottom temporary>
-      <v-view v-if="false">
+      <v-view v-if = this.userview>
         <!-- 有登入才顯示 -->
         <v-list-item>
           <v-list-item-avatar>
@@ -71,7 +71,7 @@
             <v-list-item-title>路段計算機</v-list-item-title>
           </v-list-item>
 
-          <v-view v-if="true">
+          <v-view v-if = this.userview>
             <v-list-item link>
               <v-list-item-title>活動</v-list-item-title>
             </v-list-item>
@@ -84,12 +84,14 @@
       </v-list>
 
       <v-divider></v-divider>
-      <v-view v-if="true">
+      <!-- v-view登入顯示 userview -->
+      <v-view v-if = !this.userview>
+      <!-- <v-view v-if="false"> -->
         <v-list-item link @click="login">
           <v-list-item-title>Login</v-list-item-title>
         </v-list-item>
       </v-view>
-      <v-view v-if="true">
+      <v-view v-if = this.userview>
         <v-list-item link @click="logout">
           <v-list-item-title>Logout</v-list-item-title>
         </v-list-item>
@@ -133,6 +135,7 @@ export default {
   data: () => ({
     drawer: false,
     dialog: false,
+    userview: false,
 
     group: null,
     user: {},
