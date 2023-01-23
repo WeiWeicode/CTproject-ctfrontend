@@ -35,7 +35,7 @@
         <span class="font-weight-bold">{{ year.date }}</span>
       </template>
       <!-- <v-card width="400" title= {{year.title}}> -->
-      <v-card  class="mx-auto" width="400" :title="year.title">
+      <v-card  class="mx-auto" width="200" :title="year.title">
         <v-card-text class="py-2"> {{ year.text }} </v-card-text>
 
         <!-- <h2 class="font-weight-bold">{{ year.title }}</h2> -->
