@@ -20,7 +20,7 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn text>路段計算</v-btn>
+          <v-btn color="primary" :to="road.path">查看</v-btn>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -42,6 +42,7 @@ export default {
           總爬升: 2700,
           說明: "埔里出發台灣公路最高殿堂",
           照片: "https://image.cdn-eztravel.com.tw/A7AATocaCs8ip6aACeUM5iiRiAMu-9bMIXbVQoW1vFU/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvTkEwXzE0NjY1OTA3MzAuanBn.jpg",
+          path: "/calculate/roadsection/1"
         },
         {
           id: 2,
@@ -50,6 +51,7 @@ export default {
           總爬升: 3071,
           說明: "花蓮出發到最高點",
           照片: "https://www.settour.com.tw/ss_img/poi/20210209/d013d5d8-91a3-47e6-aa64-02259e80eac9.jpg",
+          path: "/calculate/roadsection/2"
         },
         {
           id: 3,
@@ -58,6 +60,7 @@ export default {
           總爬升: 2700,
           說明: "埔里出發台灣公路最高殿堂",
           照片: "https://image.cdn-eztravel.com.tw/A7AATocaCs8ip6aACeUM5iiRiAMu-9bMIXbVQoW1vFU/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvTkEwXzE0NjY1OTA3MzAuanBn.jpg",
+          path: "/calculate/roadsection/3"
         },
         {
           id: 4,
@@ -66,6 +69,7 @@ export default {
           總爬升: 3071,
           說明: "花蓮出發到最高點",
           照片: "https://www.settour.com.tw/ss_img/poi/20210209/d013d5d8-91a3-47e6-aa64-02259e80eac9.jpg",
+          path: "/calculate/roadsection/4"
         },
         {
           id: 5,
@@ -74,6 +78,7 @@ export default {
           總爬升: 2700,
           說明: "埔里出發台灣公路最高殿堂",
           照片: "https://image.cdn-eztravel.com.tw/A7AATocaCs8ip6aACeUM5iiRiAMu-9bMIXbVQoW1vFU/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvTkEwXzE0NjY1OTA3MzAuanBn.jpg",
+          path: "/calculate/roadsection/5"
         },
         {
           id: 6,
@@ -82,6 +87,7 @@ export default {
           總爬升: 3071,
           說明: "花蓮出發到最高點",
           照片: "https://www.settour.com.tw/ss_img/poi/20210209/d013d5d8-91a3-47e6-aa64-02259e80eac9.jpg",
+          path: "/calculate/roadsection/6"
         },
       ],
     };
