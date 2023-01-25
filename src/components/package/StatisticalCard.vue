@@ -8,7 +8,7 @@
       :key="card.id"
     >
       <v-card class="mx-auto" >
-        <v-img max-height="250" :src="card.照片"></v-img>
+        <v-img  :src="card.照片"></v-img>
 
         <v-card-title class="headline">{{ card.統計表名稱 }}</v-card-title>
 
