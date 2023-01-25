@@ -35,7 +35,7 @@ export default {
       StatisticalCards: [
         {
           id: 1,
-          統計表名稱: "2022碼表",
+          統計表名稱: "2022碼表統計",
           說明: "碼表是單車愛好者最基本的入門推坑品，有哪些深得大家喜愛？又或者台灣人都用甚麼碼表呢?",
           照片: "http://c2.biketo.com/d/file/news/bikenews/2021-12-23/860e0b8015a0e067eef1248aa0ca254d.jpg",
           path: "/Statistical/chart/1",

@@ -9,7 +9,7 @@
     <!-- </v-view> -->
 
     <v-view v-if="tab == 2">
-      <FTP20min />
+      <westWuling2022 />
     </v-view>
 
     <statisticalCard />
@@ -21,14 +21,14 @@
     <script>
 // 引用統計卡片
 import stopwatch2022 from "../chart/stopwatch2022.vue";
-import FTP20min from "../chart/FTP20min.vue";
+import westWuling2022 from "../chart/westWuling2022.vue";
 
 export default {
   name: "chart",
 
   components: {
     stopwatch2022,
-    FTP20min,
+    westWuling2022,
   },
 
 //   取得網址參數
