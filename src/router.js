@@ -8,6 +8,7 @@ import Product from "./components/router/Product.vue";
 import Statistical from "./components/router/Statistical.vue";
 import x7pro from "./components/package/Product/x7pro.vue";
 import roadsection from "./components/package/segments/roadsection.vue";
+import chart from "./components/router/chart.vue"
 
 const routes = [
   {
@@ -56,6 +57,10 @@ const routes = [
     component: roadsection,
   },
  
+  {
+    path: "/Statistical/chart/:id",
+    component: chart,
+  },
 
 
 

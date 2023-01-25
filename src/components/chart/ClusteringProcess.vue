@@ -1,5 +1,5 @@
 <template>
-  <h1>聚合圖</h1>
+  <!-- <h1>聚合圖</h1> -->
 
   <div
     class="echart"
