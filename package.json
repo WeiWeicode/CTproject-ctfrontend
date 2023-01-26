@@ -21,6 +21,7 @@
   "devDependencies": {
     "@mdi/font": "^7.1.96",
     "@vitejs/plugin-vue": "^4.0.0",
+    "nuxt-vite": "^0.3.5",
     "vite": "^4.0.0",
     "vite-plugin-require-transform": "^1.0.6"
   }
