@@ -38,7 +38,8 @@
             </v-tabs>
           </v-sheet> -->
           <v-card>
-            <v-tabs center-active>
+            <v-tabs center-active slider-color="white">
+              
               <v-tab link @click.prevent="home">Home</v-tab>
               <v-tab link @click.prevent="about">about</v-tab>
               <v-tab link @click.prevent="product">開箱</v-tab>
@@ -47,6 +48,7 @@
               <v-tab></v-tab>
               <!-- 多放一個v-tab假的才能移動 -->
             </v-tabs>
+            
           </v-card>
         </v-col>
 

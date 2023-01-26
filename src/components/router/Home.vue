@@ -17,9 +17,9 @@
   </v-carousel>
 
   
-<!-- 
+
   <v-timeline side="end" align="start">
-    <v-timeline-item v-for="(year, i) in updatelog" :key="i" dot-color="pink" size="small">
+    <v-timeline-item v-for="(year, i) in updatelog" :key="i" dot-color="pink" width="194" height="100">
       <template v-slot:icon>
         <v-avatar>
           <img :src="year.timesrc" />
@@ -36,7 +36,7 @@
       
     </v-timeline-item>
 
-  </v-timeline> -->
+  </v-timeline>
 
 
   <!-- <helloEchart /> -->

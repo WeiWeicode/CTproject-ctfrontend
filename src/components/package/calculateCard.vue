@@ -20,7 +20,7 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn color="primary" :to="road.path">查看</v-btn>
+          <v-btn color="primary" :to="road.path">計算</v-btn>
         </v-card-actions>
       </v-card>
     </v-col>

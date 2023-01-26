@@ -6,9 +6,10 @@ import About from "./components/router/About.vue";
 import Blog from "./components/router/Blog.vue";
 import Product from "./components/router/Product.vue";
 import Statistical from "./components/router/Statistical.vue";
-import x7pro from "./components/package/Product/x7pro.vue";
+
 import roadsection from "./components/package/segments/roadsection.vue";
-import chart from "./components/router/chart.vue"
+import productfeed from "./components/package/product/productfeed.vue";
+import chart from "./components/chart/chart.vue"
 
 const routes = [
   {
@@ -48,11 +49,6 @@ const routes = [
   },
 
   {
-    path: "/Product/x7pro",
-    component: x7pro,
-  },
-
-  {
     path: "/Calculate/roadsection/:id",
     component: roadsection,
   },
@@ -60,6 +56,11 @@ const routes = [
   {
     path: "/Statistical/chart/:id",
     component: chart,
+  },
+
+  {
+    path: "/Product/productfeed/:id",
+    component: productfeed,
   },
 
 

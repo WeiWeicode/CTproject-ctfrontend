@@ -18,9 +18,7 @@
         </h3>
       </v-form>
 
-      <div class="text-center">
-        <v-btn class="my-2" @click="downloadcsv">下載小抄</v-btn>
-      </div>
+      
     </v-card-text>
   </v-card>
   <v-card>
@@ -131,6 +129,36 @@
     </v-card-text>
   </v-card>
 
+  <v-divider></v-divider>
+  <v-container class="grey lighten-5">
+    <v-row class="mb-6" no-gutters>
+      <v-col>
+        <v-card class="pa-2" tile outlined height="250" >
+          <v-card-title >路段資訊</v-card-title>
+          <v-card-text>路段名稱: 西進武嶺</v-card-text>
+
+          <v-card-text>總里程: 55K</v-card-text>
+          <v-card-text>總爬升: 2705m</v-card-text>
+        </v-card>
+      </v-col>
+      <v-divider vertical></v-divider>
+      <v-col>
+        <v-card class="pa-2" tile outlined height="250">
+          <v-card-title>時間估算</v-card-title>
+          <v-card-text>平均瓦數:200w</v-card-text>
+          <v-card-text>平均速度: 18km/h </v-card-text>
+          <v-card-text>所需時間: 4h20min</v-card-text>
+          <div class="text-center">
+        <v-btn class="my-2" @click="downloadcsv">下載小抄</v-btn>
+      </div>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+
   <v-container>
     <v-row class="mb-6" no-gutters>
       <v-col>
@@ -162,6 +190,7 @@
       </v-col>
     </v-row>
   </v-container>
+  <!-- 分隔線 -->
 
   <v-layout column justify-center align-center>
     <v-flex class="text-center">

@@ -20,8 +20,8 @@
     
     <script>
 // 引用統計卡片
-import stopwatch2022 from "../chart/stopwatch2022.vue";
-import westWuling2022 from "../chart/westWuling2022.vue";
+import stopwatch2022 from "./stopwatch2022.vue";
+import westWuling2022 from "./westWuling2022.vue";
 
 export default {
   name: "chart",
