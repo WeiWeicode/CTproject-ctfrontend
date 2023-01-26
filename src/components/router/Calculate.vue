@@ -1,5 +1,5 @@
 <template>
-  <h1>Calculate</h1>
+  
   
 
   <v-container fluid>
@@ -15,7 +15,7 @@
 
 <script>
 // 引用路段卡片
-import calculateCard from "../calculateCard.vue";
+import calculateCard from "../package/calculateCard.vue";
 
 export default {
   name: "Calculate",

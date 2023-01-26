@@ -16,10 +16,15 @@
     </v-carousel-item>
   </v-carousel>
 
-  
-<!-- 
+  <h1>更新日誌</h1>
+
   <v-timeline side="end" align="start">
-    <v-timeline-item v-for="(year, i) in updatelog" :key="i" dot-color="pink" size="small">
+    <v-timeline-item
+      v-for="(year, i) in updatelog"
+      :key="i"
+      dot-color="pink"
+      size="small"
+    >
       <template v-slot:icon>
         <v-avatar>
           <img :src="year.timesrc" />
@@ -29,15 +34,15 @@
       <template v-slot:opposite>
         <span class="font-weight-bold">{{ year.date }}</span>
       </template>
+      <!-- <v-card width="400" title= {{year.title}}> -->
+      <v-card class="mx-auto" width="400" :title="year.title">
+        <v-card-text class="py-2"> {{ year.text }} </v-card-text>
 
-      <h2 class="font-weight-bold">{{ year.title }}</h2>
-      <p>{{ year.text }}</p>
-    
-      
+        <!-- <h2 class="font-weight-bold">{{ year.title }}</h2> -->
+        <!-- <p>{{ year.text }}</p> -->
+      </v-card>
     </v-timeline-item>
-
-  </v-timeline> -->
-
+  </v-timeline>
 
   <!-- <helloEchart /> -->
 </template>

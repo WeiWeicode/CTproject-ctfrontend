@@ -40,7 +40,7 @@
 
 
 <script>
-import FTP20min from "./chart/20minFTP.vue";
+import FTP20min from "./chart/FTP20min.vue";
 import DoughnutChart from "./chart/DoughnutChart.vue";
 import ClusteringProcess from "./chart/ClusteringProcess.vue";
 

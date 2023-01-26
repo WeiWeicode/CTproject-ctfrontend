@@ -710,6 +710,7 @@ __metadata:
     echarts-gl: ^2.0.9
     echarts-stat: ^1.2.0
     jquery: ^3.6.3
+    pinia: ^2.0.29
     vite: ^4.0.0
     vite-plugin-require-transform: ^1.0.6
     vue: ^3.2.45
@@ -1427,6 +1428,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pinia@npm:^2.0.29":
+  version: 2.0.29
+  resolution: "pinia@npm:2.0.29"
+  dependencies:
+    "@vue/devtools-api": ^6.4.5
+    vue-demi: "*"
+  peerDependencies:
+    "@vue/composition-api": ^1.4.0
+    typescript: ">=4.4.4"
+    vue: ^2.6.14 || ^3.2.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+    typescript:
+      optional: true
+  checksum: 600a941a9cde357407f40ac278158cf7627a536637d6dbf98a45c717447f5295c6946a7816ba6ccf27224fc1849c7784d2039967c78e6369cb2ef76e4367551f
+  languageName: node
+  linkType: hard
+
 "postcss@npm:^8.1.10, postcss@npm:^8.4.20":
   version: 8.4.21
   resolution: "postcss@npm:8.4.21"
@@ -1766,6 +1786,22 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: eb86c8cdfe8dcb6644005486b31cb60bc596f2aa683cb194abb5c0afca7c2a5dfdb02bbc7f83f419ad170227ac9c3b898f4406a6d1433105fb61d79d78e47d52
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:*":
+  version: 0.13.11
+  resolution: "vue-demi@npm:0.13.11"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 0fbe9bf8ab7fe498ffa2bbd0cfc8f6f43a6bbaa5eda3e20ef1b70dca7c8b0ddb216a7ff2f632b694fe0735805638975abb441c621ec0bd2e6d4656353f316c15
   languageName: node
   linkType: hard
 

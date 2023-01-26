@@ -11,7 +11,7 @@
 
         <!-- <v-spacer></v-spacer> -->
 
-        <v-col class="pa-2" outlined tile>
+        <v-col class="pa-3" outlined tile>
           <v-app-bar-nav-icon @click.stop="drawer = !drawer">
           </v-app-bar-nav-icon>
         </v-col>
@@ -24,13 +24,30 @@
 
         <v-spacer></v-spacer>
         <v-col class="pa-2" outlined tile>
-          <!-- about blog -->
+          <!-- <v-sheet elevation="2">
+            
+            <v-tabs
+              
+              show-arrows
+              slider-color="teal-lighten-3"
+            >
+              <v-tab link @click.prevent="home">Home</v-tab>
+              <v-tab link @click.prevent="product">開箱</v-tab>
+              <v-tab link @click.prevent="blog">blog</v-tab>
+              <v-tab link @click.prevent="about">about</v-tab>
+            </v-tabs>
+          </v-sheet> -->
+          <v-card>
+            <v-tabs center-active>
+              <v-tab link @click.prevent="home">Home</v-tab>
+              <v-tab link @click.prevent="about">about</v-tab>
+              <v-tab link @click.prevent="product">開箱</v-tab>
+              <v-tab link @click.prevent="blog">blog</v-tab>
 
-          <v-tabs>
-            <v-tab>about</v-tab>
-            <v-tab>開箱</v-tab>
-            <v-tab>blog</v-tab>
-          </v-tabs>
+              <v-tab></v-tab>
+              <!-- 多放一個v-tab假的才能移動 -->
+            </v-tabs>
+          </v-card>
         </v-col>
 
         <!-- <v-col>
@@ -40,7 +57,7 @@
     </v-row>
 
     <v-navigation-drawer v-model="drawer" bottom temporary>
-      <v-view v-if="false">
+      <v-view v-if="this.userview">
         <!-- 有登入才顯示 -->
         <v-list-item>
           <v-list-item-avatar>
@@ -63,15 +80,15 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item link @click.prevent="home">
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
           <v-list-item link @click.prevent="calculate">
             <v-list-item-title>路段計算機</v-list-item-title>
           </v-list-item>
 
-          <v-view v-if="true">
+          <v-list-item link @click.prevent="statistical">
+            <v-list-item-title>大數據統計</v-list-item-title>
+          </v-list-item>
+
+          <v-view v-if="this.userview">
             <v-list-item link>
               <v-list-item-title>活動</v-list-item-title>
             </v-list-item>
@@ -84,12 +101,14 @@
       </v-list>
 
       <v-divider></v-divider>
-      <v-view v-if="true">
+      <!-- v-view登入顯示 userview -->
+      <v-view v-if="!this.userview">
+        <!-- <v-view v-if="false"> -->
         <v-list-item link @click="login">
           <v-list-item-title>Login</v-list-item-title>
         </v-list-item>
       </v-view>
-      <v-view v-if="true">
+      <v-view v-if="this.userview">
         <v-list-item link @click="logout">
           <v-list-item-title>Logout</v-list-item-title>
         </v-list-item>
@@ -100,7 +119,6 @@
       <v-container>
         <router-view />
       </v-container>
-      
     </v-main>
 
     <v-dialog v-model="dialog" persistent max-width="600px">
@@ -115,7 +133,6 @@
       <h1>APPvue</h1>
       <helloEchart />
     </v-main> -->
-    
   </v-app>
 </template>
 
@@ -133,6 +150,7 @@ export default {
   data: () => ({
     drawer: false,
     dialog: false,
+    userview: false,
 
     group: null,
     user: {},
@@ -160,6 +178,19 @@ export default {
     calculate() {
       this.$router.push("/Calculate");
     },
+    statistical() {
+      this.$router.push("/Statistical");
+    },
+    product() {
+      this.$router.push("/Product");
+    },
+    blog() {
+      this.$router.push("/Blog");
+    },
+    about() {
+      this.$router.push("/About");
+    },
+
     login() {
       this.dialog = true;
     },
