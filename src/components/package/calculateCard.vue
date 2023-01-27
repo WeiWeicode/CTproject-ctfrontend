@@ -6,21 +6,21 @@
       <v-card class="mx-auto" height="500">
         <v-img
         height="300"
-          :src="road.照片"
+          :src="road.imglink"
           
         ></v-img>
 
-        <v-card-title class="headline">{{ road.路段名稱 }}</v-card-title>
+        <v-card-title class="headline">{{ road.name }}</v-card-title>
 
-        <v-card-subtitle>總里程: {{ road.總公里 }} KM</v-card-subtitle>
-        <v-card-subtitle>總爬升: {{ road.總爬升 }} KM</v-card-subtitle>
+        <v-card-subtitle>總里程: {{ road.totalmileage }} KM</v-card-subtitle>
+        <v-card-subtitle>總爬升: {{ road.totalclimb }} KM</v-card-subtitle>
 
         <v-card-text>
           {{ road.說明 }}
         </v-card-text>
 
         <v-card-actions>
-          <v-btn color="primary" :to="road.path">計算</v-btn>
+          <v-btn color="primary" :to="road.tolink">計算</v-btn>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -37,21 +37,21 @@ export default {
       roadSection: [
         {
           id: 1,
-          路段名稱: "西進武嶺",
-          總公里: 55,
-          總爬升: 2700,
-          說明: "埔里出發台灣公路最高殿堂",
-          照片: "https://image.cdn-eztravel.com.tw/A7AATocaCs8ip6aACeUM5iiRiAMu-9bMIXbVQoW1vFU/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvTkEwXzE0NjY1OTA3MzAuanBn.jpg",
-          path: "/calculate/roadsection/1"
+          name: "西進武嶺",
+          totalmileage: 55,
+          totalclimb: 2700,
+          text: "埔里出發台灣公路最高殿堂",
+          imglink: "https://image.cdn-eztravel.com.tw/A7AATocaCs8ip6aACeUM5iiRiAMu-9bMIXbVQoW1vFU/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvTkEwXzE0NjY1OTA3MzAuanBn.jpg",
+          tolink: "/calculate/roadsection/1"
         },
         {
           id: 2,
-          路段名稱: "東進武嶺",
-          總公里: 87,
-          總爬升: 3071,
-          說明: "花蓮出發到最高點",
-          照片: "https://www.settour.com.tw/ss_img/poi/20210209/d013d5d8-91a3-47e6-aa64-02259e80eac9.jpg",
-          path: "/calculate/roadsection/2"
+          name: "東進武嶺",
+          totalmileage: 87,
+          totalclimb: 3071,
+          text: "花蓮出發到最高點",
+          imglink: "https://www.settour.com.tw/ss_img/poi/20210209/d013d5d8-91a3-47e6-aa64-02259e80eac9.jpg",
+          tolink: "/calculate/roadsection/2"
         },
         
       ],

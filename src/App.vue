@@ -42,7 +42,7 @@
               
               <v-tab link @click.prevent="home">Home</v-tab>
               <v-tab link @click.prevent="about">about</v-tab>
-              <v-tab link @click.prevent="product">開箱</v-tab>
+              <v-tab link @click.prevent="product">product</v-tab>
               <v-tab link @click.prevent="blog">blog</v-tab>
 
               <v-tab></v-tab>
@@ -59,9 +59,9 @@
     </v-row>
 
     <v-navigation-drawer v-model="drawer" bottom temporary>
-      <v-view v-if="this.userview">
+      <!-- <v-view v-if="this.userview"> -->
         <!-- 有登入才顯示 -->
-        <v-list-item>
+        <!-- <v-list-item>
           <v-list-item-avatar>
             <v-avatar>
               <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
@@ -75,7 +75,7 @@
             <v-list-item-subtitle>{{ user.email }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
-      </v-view>
+      </v-view> -->
 
       <v-list nav dense>
         <v-list-item-group
@@ -90,7 +90,7 @@
             <v-list-item-title>大數據統計</v-list-item-title>
           </v-list-item>
 
-          <v-view v-if="this.userview">
+          <!-- <v-view v-if="this.userview">
             <v-list-item link>
               <v-list-item-title>活動</v-list-item-title>
             </v-list-item>
@@ -98,14 +98,14 @@
             <v-list-item link @click.prevent="settings">
               <v-list-item-title>設置</v-list-item-title>
             </v-list-item>
-          </v-view>
+          </v-view> -->
         </v-list-item-group>
       </v-list>
 
       <v-divider></v-divider>
-      <!-- v-view登入顯示 userview -->
-      <v-view v-if="this.userview">
-        <!-- <v-view v-if="false"> -->
+   
+      <!-- <v-view v-if="this.userview">
+       
         <v-list-item link @click="login">
           <v-list-item-title>Login</v-list-item-title>
         </v-list-item>
@@ -114,7 +114,7 @@
         <v-list-item link @click="logout">
           <v-list-item-title>Logout</v-list-item-title>
         </v-list-item>
-      </v-view>
+      </v-view> -->
     </v-navigation-drawer>
 
     <v-main>

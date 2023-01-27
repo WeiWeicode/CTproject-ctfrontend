@@ -4,7 +4,7 @@
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="(blog, i) in blogs" :key="i">
       <v-card class="mx-auto" height="500">
-        <v-img height="200" :src="blog.照片"></v-img>
+        <v-img height="200" :src="blog.imglink"></v-img>
 
         <v-card-title class="headline">{{ blog.name }}</v-card-title>
 
@@ -16,12 +16,12 @@
             </v-chip-group>
           </div></v-card-subtitle>
         <v-card-text>
-          {{ blog.說明 }}
+          {{ blog.text }}
           
         </v-card-text>
 
         <v-card-actions>
-          <v-btn color="primary" :to="blog.連結">查看</v-btn>
+          <v-btn color="primary" :to="blog.tolink">查看</v-btn>
         </v-card-actions>
       </v-card>
     </v-col>
@@ -37,21 +37,21 @@ export default {
         {
           id: 0,
           name: "第一個部落格",
-          類型: "通用",
-          說明: "第一個部落格測試",
+          class: "通用",
+          text: "第一個部落格測試",
           tags: ["部落格", "notion", "實用"],
-          照片: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
-          連結: "/blog/blogfeed/5413122eef544661b51f4b6653fb6820",
+          imglink: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+          tolink: "/blog/blogfeed/5413122eef544661b51f4b6653fb6820",
         },
 
         {
           id: 1,
           name: "第二個部落格",
-          類型: "通用",
-          說明: "第二個部落格測試網址參數",
+          class: "通用",
+          text: "第二個部落格測試網址參數",
           tags: ["測試", "notion", "功能"],
-          照片: "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
-          連結: "/blog/blogfeed/3a702f683b914bebb94e87b958921f51",
+          imglink: "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light",
+          tolink: "/blog/blogfeed/3a702f683b914bebb94e87b958921f51",
         },
 
       ],
