@@ -104,7 +104,7 @@
 
       <v-divider></v-divider>
       <!-- v-view登入顯示 userview -->
-      <v-view v-if="!this.userview">
+      <v-view v-if="this.userview">
         <!-- <v-view v-if="false"> -->
         <v-list-item link @click="login">
           <v-list-item-title>Login</v-list-item-title>

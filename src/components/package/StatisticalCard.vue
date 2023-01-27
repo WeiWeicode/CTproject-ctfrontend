@@ -47,20 +47,7 @@ export default {
           照片: "https://image.cdn-eztravel.com.tw/A7AATocaCs8ip6aACeUM5iiRiAMu-9bMIXbVQoW1vFU/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvTkEwXzE0NjY1OTA3MzAuanBn.jpg",
           path: "/Statistical/chart/2",
         },
-        {
-          id: 3,
-          統計表名稱: "自行車衣品牌",
-          說明: "零零總總的自行車衣，你最喜歡哪個呢？",
-          照片: "https://i3.momoshop.com.tw/1658771944/goodsimg/0009/359/404/9359404_R4_m.webp",
-          path: "/Statistical/chart/3",
-        },
-        {
-          id: 4,
-          統計表名稱: "訓練台統計",
-          說明: "訓練台是單車愛好者最基本的練功聖品，大神們是住在上面嗎？又或者都用甚麼訓練台呢",
-          照片: "https://www.gofunsports.com/material-alias/%E5%AE%A4%E5%85%A7%E9%81%8B%E5%8B%95/%E5%96%AE%E8%BB%8A%E8%A8%93%E7%B7%B4/%E7%92%B0%E5%A2%83%E4%BB%8B%E7%B4%B9-600x400-4.jpg",
-          path: "/Statistical/chart/4",
-        },
+        
       ],
     };
   },

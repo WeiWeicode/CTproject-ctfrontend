@@ -51,32 +51,7 @@ export default {
           連結: "/Product/productfeed/1",
         },
 
-        {
-          id: 1,
-          name: "gopro hero 11 black",         
-          類型: "運動攝影機",
-          說明: "常常發熱",
-          照片: "https://s.yimg.com/os/creatr-uploaded-images/2022-09/9abcb590-342b-11ed-bb77-b035c854493d",
-          連結: "/Product/1",
-        },
-
-        {
-          id: 1,
-          name: "gopro hero 11 black",         
-          類型: "運動攝影機",
-          說明: "常常發熱",
-          照片: "https://s.yimg.com/os/creatr-uploaded-images/2022-09/9abcb590-342b-11ed-bb77-b035c854493d",
-          連結: "/Product/1",
-        },
-
-        {
-          id: 1,
-          name: "gopro hero 11 black",         
-          類型: "運動攝影機",
-          說明: "常常發熱",
-          照片: "https://s.yimg.com/os/creatr-uploaded-images/2022-09/9abcb590-342b-11ed-bb77-b035c854493d",
-          連結: "/Product/1",
-        },
+        
         
       ],
     };

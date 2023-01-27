@@ -1,22 +1,27 @@
 <template>
   <div>
     <h1>Blog</h1>
-    <blognav />
+    <blogCard />
   </div>
+  
 </template>
   
   <script>
+// 使用者設定
+// import blognav from "../package/blog/blognav.vue";
+import blogCard from "../package/blogCard.vue";
 
-  // 使用者設定
-  import blognav from "../package/blog/blognav.vue";
+export default {
+  name: "Blog",
+  data() {
+    return {
+      // blognav,
+      tab: "option-1",
+    };
+  },
+  components: {
+    blogCard,
+  },
+};
+</script>
 
-
-  export default {
-    name: "Blog",
-    components: {
-      blognav,
-    },
-    
-  };
-  
-  </script>

@@ -60,6 +60,7 @@ export default {
       events: [],
       input: null,
       nonce: 0,
+      // 連播透明背景
       colors: [
         "background-color:transparent;",
         "background-color:transparent;",
@@ -78,13 +79,13 @@ export default {
 
       updatelog: [
         {
-          date: "2023.1.22",
+          date: "2023.1.27",
           title: "網頁更新",
-          text: "新增登入功能",
+          text: "新增blog功能",
           timesrc: weiicon,
         },
         {
-          date: "2023.1.22",
+          date: "2023.1.25",
           title: "網頁更新",
           text: "新增計算機功能",
           timesrc: cticon,

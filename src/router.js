@@ -9,6 +9,7 @@ import Statistical from "./components/router/Statistical.vue";
 
 import roadsection from "./components/package/segments/roadsection.vue";
 import productfeed from "./components/package/product/productfeed.vue";
+import blogfeed from "./components/package/blog/blogfeed.vue";
 import chart from "./components/chart/chart.vue"
 
 const routes = [
@@ -63,6 +64,10 @@ const routes = [
     component: productfeed,
   },
 
+  {
+    path: "/Blog/blogfeed/:id",
+    component: blogfeed,
+  },
 
 
   

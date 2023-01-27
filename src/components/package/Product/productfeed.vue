@@ -21,7 +21,7 @@ import x7rpo from "./x7pro.vue";
 import gopro11 from "./gopro11.vue";
 
 export default {
-  name: "chart",
+  name: "productfeed",
 
   components: {
     x7rpo,
