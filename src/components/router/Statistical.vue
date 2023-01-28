@@ -15,6 +15,8 @@ import statisticalCard from "../package/StatisticalCard.vue";
 export default {
   name: "Statistical",
 
+  
+
   components: {
     statisticalCard,
   },

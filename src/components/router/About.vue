@@ -29,9 +29,9 @@
               <v-btn @click="dialog = true">建議</v-btn>
             </v-view>
             <v-view v-if="item.iconbool">
-              <v-icon size="50">mdi-email</v-icon>
+              <!-- <v-icon size="50">mdi-email</v-icon> -->
               <v-icon size="50" color="blue">mdi-facebook</v-icon>
-              <v-icon size="50" color="#C13584">mdi-instagram</v-icon>
+              <!-- <v-icon size="50" color="#C13584">mdi-instagram</v-icon> -->
               <v-icon size="50" color="#FD1D1D">mdi-youtube</v-icon>
             </v-view>
           </v-card-text>

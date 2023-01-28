@@ -28,33 +28,42 @@
 
 
 <script>
+
+import axios from "axios";
+
 export default {
   data() {
     return {
 
       products: [
-        {
-          id: 0,
-          name: "智騎X7 Pro",
-          class: "訓練台",
-          text: "便宜實用的訓練台",
-          imglink: "http://cdn.shopify.com/s/files/1/0535/4255/1737/products/x7-4_1200x1200.png?v=1611997201",
-          tolink: "/Product/productfeed/0",
-        },
+        // {
+        //   id: 0,
+        //   name: "智騎X7 Pro",
+        //   class: "訓練台",
+        //   text: "便宜實用的訓練台",
+        //   imglink: "http://cdn.shopify.com/s/files/1/0535/4255/1737/products/x7-4_1200x1200.png?v=1611997201",
+        //   tolink: "/Product/productfeed/0",
+        // },
   
-        {
-          id: 1,
-          name: "gopro hero 11 black",         
-          class: "運動攝影機",
-          text: "常常發熱",
-          imglink: "https://s.yimg.com/os/creatr-uploaded-images/2022-09/9abcb590-342b-11ed-bb77-b035c854493d",
-          tolink: "/Product/productfeed/1",
-        },
+        // {
+        //   id: 1,
+        //   name: "gopro hero 11 black",         
+        //   class: "運動攝影機",
+        //   text: "常常發熱",
+        //   imglink: "https://s.yimg.com/os/creatr-uploaded-images/2022-09/9abcb590-342b-11ed-bb77-b035c854493d",
+        //   tolink: "/Product/productfeed/1",
+        // },
 
         
         
       ],
     };
+  },
+
+  mounted: function () {
+    axios.get("http://114.34.15.124:5172/productcard/").then((response) => {
+      this.products = response.data;
+    });
   },
 
   
