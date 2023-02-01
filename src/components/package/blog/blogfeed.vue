@@ -1,8 +1,10 @@
 <template>
-  <NotionRenderer :blockMap="blockMap" fullPage />
+  <div class="textleft">
+    <NotionRenderer :blockMap="blockMap" fullPage />
+  </div>
 </template>
     
-    <script>
+<script>
 import { NotionRenderer, getPageBlocks } from "vue-notion";
 
 export default {
@@ -23,6 +25,13 @@ export default {
 };
 </script>
     
-    <style>
-@import "vue-notion/src/styles.css"; /* optional Notion-like styles */
+<style>
+@import "vue-notion/src/styles.css";
+/* optional Notion-like styles */
+.textleft {
+  /* 字靠左 */
+  text-align: left;
+}
+
+
 </style>

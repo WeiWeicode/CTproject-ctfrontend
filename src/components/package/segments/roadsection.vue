@@ -133,7 +133,7 @@
   <v-container class="grey lighten-5">
     <v-row class="mb-6" no-gutters>
       <v-col>
-        <v-card class="pa-2" tile outlined height="250" >
+        <v-card class="pa-2" tile outlined height="300" >
           <v-card-title >路段資訊</v-card-title>
           <v-card-text>路段名稱: 西進武嶺</v-card-text>
 
@@ -143,7 +143,7 @@
       </v-col>
       <v-divider vertical></v-divider>
       <v-col>
-        <v-card class="pa-2" tile outlined height="250">
+        <v-card class="pa-2" tile outlined height="300">
           <v-card-title>時間估算</v-card-title>
           <v-card-text>平均瓦數:200w</v-card-text>
           <v-card-text>平均速度: 18km/h </v-card-text>

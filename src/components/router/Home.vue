@@ -67,8 +67,8 @@ export default {
           id: 2,
           color: "background-color:transparent;",
           // slide: "Second",
-          imglink:
-            "https://twphoto.soonnet.org/Photo/Photo_Resources/232367/1671895393000File/9089bc19-420e-4a96-b043-86322cdaf8d3_PB.jpg",
+          // imglink:
+          //   "https://twphoto.soonnet.org/Photo/Photo_Resources/232367/1671895393000File/9089bc19-420e-4a96-b043-86322cdaf8d3_PB.jpg",
         },
       ],
       // images: [

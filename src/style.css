@@ -4,6 +4,8 @@
   line-height: 24px;
   font-weight: 400; 
 
+
+
   /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
@@ -36,14 +38,22 @@ a:hover {
 
 body {
   margin: 0;
-  display: inline;
-  /* display:block; */
-  /* display: inline-block; */
-  vertical-align: middle;
-  max-width: 500px;
-  place-items: center;
   
+  display: inline;
+ 
+  /* display: flex-start; */
+  /* display:block; */
+
+
+  /* display: inline-block; */
+  max-width: Auto;
+
+  vertical-align: middle;
+  place-items: center;
   min-height: 100vh;
+
+  
+
 }
 
 h1 {
@@ -75,10 +85,16 @@ button:focus-visible {
 }
 
 #app {
-  max-width: Auto;
+  max-width: auto;
+  
   margin: Auto;
+
+  
+  
   padding: 1rem;
   text-align: center;
+
+
 }
 
 @media (prefers-color-scheme: light) {
