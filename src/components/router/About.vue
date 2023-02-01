@@ -5,7 +5,7 @@
       width="auto"
       height="400"
       :aspect-ratio="1"
-      src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t39.30808-6/325662876_733803157928320_3815381293310281069_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=rSNLgAWyOFgAX8Q5w_n&_nc_ht=scontent.ftpe7-3.fna&oh=00_AfBQY6UlOPx_0CkZRdQe_gXlKptU8W-BYVZUWuSuZJOEjQ&oe=63D5F849"
+      src="https://twphoto.soonnet.org/Photo/Photo_Resources/243814/1672540824000File/7f919483-0713-4e8b-962a-d6af6dec0b95_PB.jpg"
       cover
     ></v-img>
   </div>

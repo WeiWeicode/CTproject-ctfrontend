@@ -2,20 +2,25 @@
  
   <!-- v-for="road in roadSection" -->
   <!-- 一排三個卡片 -->
+  
+
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="(product, i) in products" :key="i">
       <v-card class="mx-auto" height="500">
-        <v-img
-        height="300"
-          :src="product.imglink"
-          
-        ></v-img>
+        <v-img height="200" :src="product.imglink"></v-img>
 
         <v-card-title class="headline">{{ product.name }}</v-card-title>
 
-        <v-card-subtitle>{{ product.class }} </v-card-subtitle>
+        <v-card-subtitle><div class="pa-4">
+            <!-- <v-chip-group selected-class="text-primary" column>
+              <v-chip v-for="tag in products.tags" :key="tag">
+                {{ tag }}
+              </v-chip>
+            </v-chip-group> -->
+          </div></v-card-subtitle>
         <v-card-text>
           {{ product.text }}
+          
         </v-card-text>
 
         <v-card-actions>
@@ -24,6 +29,9 @@
       </v-card>
     </v-col>
   </v-row>
+
+
+
 </template>
 
 
@@ -42,7 +50,7 @@ export default {
         //   class: "訓練台",
         //   text: "便宜實用的訓練台",
         //   imglink: "http://cdn.shopify.com/s/files/1/0535/4255/1737/products/x7-4_1200x1200.png?v=1611997201",
-        //   tolink: "/Product/productfeed/0",
+        //   tolink: "/products/productsfeed/0",
         // },
   
         // {
@@ -51,7 +59,7 @@ export default {
         //   class: "運動攝影機",
         //   text: "常常發熱",
         //   imglink: "https://s.yimg.com/os/creatr-uploaded-images/2022-09/9abcb590-342b-11ed-bb77-b035c854493d",
-        //   tolink: "/Product/productfeed/1",
+        //   tolink: "/products/productsfeed/1",
         // },
 
         

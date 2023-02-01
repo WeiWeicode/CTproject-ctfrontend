@@ -1,41 +1,28 @@
 <template>
-      <v-container fluid>
-    <!-- <v-view v-if="tab === 1"> -->
-    <v-view v-if="tab == 0">
-      <x7rpo />
-    </v-view>
-    <!-- </v-view> -->
-
-    <v-view v-if="tab == 1">
-      <gopro11 />
-    </v-view>
-
-    <statisticalCard />
-  </v-container>
+  <NotionRenderer :blockMap="blockMap" fullPage />
 </template>
-
-
-<script>
-
-import x7rpo from "./x7pro.vue";
-import gopro11 from "./gopro11.vue";
+    
+    <script>
+import { NotionRenderer, getPageBlocks } from "vue-notion";
 
 export default {
-  name: "productfeed",
-
-  components: {
-    x7rpo,
-    gopro11,
-  },
-
-//   取得網址參數
+  components: { NotionRenderer },
   data() {
     return {
-      tab: this.$route.params.id,
+      blockMap: null,
+
+      // 接收網址參數
+      notionurl: this.$route.params.id,
     };
   },
 
-
+  async created() {
+    // get Notion blocks from the API via a Notion pageId
+    this.blockMap = await getPageBlocks(this.notionurl);
+  },
 };
-
 </script>
+    
+    <style>
+@import "vue-notion/src/styles.css"; /* optional Notion-like styles */
+</style>

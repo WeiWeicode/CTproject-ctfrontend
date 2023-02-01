@@ -45,7 +45,7 @@
               <v-tab link @click.prevent="product">product</v-tab>
               <v-tab link @click.prevent="blog">blog</v-tab>
 
-              <v-tab></v-tab>
+              <v-tab size='1'></v-tab>
               <!-- 多放一個v-tab假的才能移動 -->
             </v-tabs>
             
